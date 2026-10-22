@@ -1,0 +1,21 @@
+{
+  "name": "video-annotation-platform",
+  "private": true,
+  "version": "1.0.0",
+  "description": "视频片段标注平台：多租户标注任务发布、时间轴标注与每日有效工作时长统计",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:web": "npm --workspace web run dev",
+    "build": "npm --workspace web run build",
+    "start": "npm --workspace server run start",
+    "seed": "npm --workspace server run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

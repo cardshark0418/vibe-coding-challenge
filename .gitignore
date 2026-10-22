@@ -1,0 +1,12 @@
+node_modules/
+dist/
+server/data/*.db
+server/data/*.db-journal
+server/data/*.db-wal
+server/data/*.db-shm
+server/data/uploads/
+server/public/videos/*.mp4
+!server/public/videos/pusht-demo.mp4
+.DS_Store
+*.log
+.env
